@@ -1,22 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Atlas of Small Things — index</title>
+  <style>:root{
+  --bg:#0f1115; --card:#0f1720; --accent:#7bd389; --muted:#9aa6b2;
+  --glass: rgba(255,255,255,0.04);
+  --radius:16px;
+  --maxw:900px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px 800px at 10% 10%, rgba(123,211,137,0.06), transparent 6%),
+              radial-gradient(900px 600px at 90% 90%, rgba(123,211,137,0.03), transparent 6%),
+              var(--bg); color:#e6eef3; -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+}
+.wrap{max-width:var(--maxw); margin:40px auto; padding:24px;}
+header{display:flex; gap:12px; align-items:center; margin-bottom:18px;}
+.logo{width:56px;height:56px; display:grid; place-items:center; background:linear-gradient(135deg,#0b1220,#081018); border-radius:12px; box-shadow: 0 6px 18px rgba(0,0,0,0.6); font-weight:700; color:var(--accent);}
+h1{margin:0; font-size:28px}
+p.lead{color:var(--muted); margin-top:6px;}
+nav{display:flex; gap:8px; margin:18px 0; flex-wrap:wrap;}
+a.btn{display:inline-block; padding:10px 14px; border-radius:12px; background:var(--glass); color:var(--accent); text-decoration:none; font-weight:600; border:1px solid rgba(255,255,255,0.03);}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:22px; border-radius:var(--radius); box-shadow: 0 6px 20px rgba(2,6,10,0.6); border:1px solid rgba(255,255,255,0.03);}
+.meta{color:var(--muted); font-size:14px;}
+footer{margin-top:28px; color:var(--muted); font-size:14px;}
+.nav-row{display:flex; justify-content:space-between; gap:12px; margin-top:18px;}
+.center{display:flex; align-items:center; justify-content:center;}
+.verse{font-size:18px; margin:18px 0; color:#dff7e8}
+.link-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:14px;}
+.tile{padding:14px; border-radius:12px; background:linear-gradient(90deg, rgba(255,255,255,0.012), rgba(255,255,255,0.006)); border:1px dashed rgba(255,255,255,0.02); min-height:90px; display:flex; align-items:center; justify-content:center; text-align:center;}
+img.inline-illus{max-width:100%; height:auto; border-radius:10px;}
+@media (max-width:600px){
+  .wrap{margin:18px;padding:16px}
+  h1{font-size:22px}
+}
+.small{font-size:13px;color:var(--muted)}
+.continue{margin-top:20px; display:inline-block; padding:12px 18px; background:linear-gradient(90deg,var(--accent),#6abfdf); color:#06221a; border-radius:12px; text-decoration:none; font-weight:700;}
+.footer-links{display:flex; gap:12px; flex-wrap:wrap;}
+.scent{opacity:0.06; position:fixed; right:-80px; bottom:-80px; transform:rotate(25deg); width:420px; height:420px; pointer-events:none}
+</style>
 </head>
 <body>
-  <h1>Welcome to My GitHub Page!</h1>
-  <p>This is my first website hosted on GitHub Pages.</p>
-  <img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" alt="Celebration GIF" style="width:300px;">
-  <p>
-    <a href="about.html" style="color: #cf77a4; text-decoration: none; font-weight: bold;">
-      About Me
-    </a>
-    |
-    <a href="contact.html" style="color: #cf77a4; text-decoration: none; font-weight: bold;">
-      Contact
-    </a>
-  </p>
+  <div class="wrap">
+    <header>
+      <div class="logo">AT</div>
+      <div>
+        <h1>Atlas of Small Things</h1>
+        <p class="lead">a hypertext, poetic net-art piece — click through a small world built from fragments.</p>
+      </div>
+    </header>
+
+    <main class="card">
+      <p class="verse">Start here. Each page is a small room: a sentence, an image, a decision. Wander slowly.</p>
+
+      <nav>
+        <a class="btn" href="pages/page1.html">Enter the Atlas</a>
+        <a class="btn" href="pages/page2.html">Follow a Thread</a>
+        <a class="btn" href="pages/page3.html">Open the Window</a>
+      </nav>
+
+      <div class="link-grid">
+        <div class="tile"><a href="pages/page4.html" class="btn">The Garden</a></div>
+        <div class="tile"><a href="pages/page5.html" class="btn">The Loft</a></div>
+        <div class="tile"><a href="pages/page6.html" class="btn">The Archive</a></div>
+        <div class="tile"><a href="pages/page7.html" class="btn">Maps</a></div>
+      </div>
+
+      <div class="nav-row">
+        <div class="small">Pages total: 11</div>
+        <div class="small">Mobile-ready • No external images</div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <span class="small">Artist statement (2–4 lines): see artist_statement.txt</span>
+      </div>
+    </footer>
+  </div>
+  <!-- decorative SVG -->
+  <svg class="scent" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="g" x1="0%" x2="100%"><stop offset="0%" stop-color="#7bd389"/><stop offset="100%" stop-color="#6abfdf"/></linearGradient></defs>
+    <g fill="url(#g)"><circle cx="50" cy="50" r="58"/></g>
+  </svg>
 </body>
 </html>
